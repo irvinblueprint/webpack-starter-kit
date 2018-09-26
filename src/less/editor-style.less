@@ -1,0 +1,66 @@
+@import (reference) 'variables'; // LESS mixins & variables
+
+// Base styles and resets
+@import 'base/normalize'; // Normalize
+@import 'base/html'; // Base HTML element Styles
+@import 'base/forms'; // Forms and inputs
+
+// Stylesheets for WordPress generated classes
+@import 'wordpress/images'; // Image alignment and caption styles
+@import 'wordpress/media'; // Embedded WordPress media styles
+@import 'wordpress/galleries'; // WordPress gallery styles
+
+// Components.
+@import 'components/grid'; // Grid system
+
+// Utility classes.
+@import 'utilities/utilities'; // Utilities
+
+/*------------------------------------*\
+	#EDITOR
+\*------------------------------------*/
+
+#tinymce {
+	max-width: 960px;
+	margin: 15px;
+	font: inherit;
+	background: @background;
+	color: @color;
+}
+
+td,
+th {
+	font-family: inherit;
+}
+
+td,
+th,
+pre,
+.gallery,
+.wp-caption-text,
+.wp-caption-dd,
+.gallery .gallery-caption  {
+	line-height: inherit;
+}
+
+th,
+td,
+.wp-caption-text,
+.wp-caption-dd {
+	font-size: inherit;
+}
+
+.wp-caption-text,
+.wp-caption-dd {
+	margin: 0;
+	padding: 0;
+}
+
+.wp-caption-text,
+.wp-caption-dd {
+	text-align: left;
+}
+
+.dashicons {
+	box-sizing: content-box;
+}

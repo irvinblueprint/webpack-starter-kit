@@ -1,0 +1,39 @@
+.nav {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 15rem;
+	padding-top: 4.5rem;
+	background: @darkBlue;
+	box-shadow: inset -40px 0 40px -45px darken(@darkBlue,15%);
+
+	&,
+	a {
+		color: #FFF;
+	}
+}
+
+.nav__list {
+	overflow: auto;
+	max-height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav__item {
+	margin: 0;
+
+	a {
+		display: block;
+		padding: 0.5em 1em;
+		border-bottom: 1px solid fade(#FFF,5%);
+	}
+
+	a:hover {
+		background: @green;
+		box-shadow: inset -40px 0 40px -45px darken(@green,20%);
+	}
+}

@@ -1,0 +1,32 @@
+.footer {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background: @darkBlue;
+	.clearfix();
+
+	&,
+	a:not(:hover),
+	h1, h2, h3, h4, h5, h6 {
+		color: #FFF;
+	}
+
+	.grid {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+
+.footer__logo {
+	margin: 0.5rem 0 2rem;
+
+	@media ( min-width: @M ) {
+		margin-bottom: 0;
+	}
+}
+
+.footer__right {
+	@media ( min-width: @M ) {
+		text-align: right;
+	}
+}

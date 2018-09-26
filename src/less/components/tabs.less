@@ -1,0 +1,44 @@
+.tabs {
+
+}
+
+.tabs__tablist {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@media ( min-width: @L ) {
+		display: block;
+	}
+
+	li {
+		display: inline-block;;
+		margin: 0;
+	}
+}
+
+.tabs__tab {
+	display: block;
+
+	@media ( min-width: @L ) {
+		display: none;
+
+		.tabs__tablist & {
+			display: block;;
+		}
+	}
+
+	&:hover,
+	&[aria-selected="true"] {
+
+	}
+}
+
+.tabs__panel {
+	overflow: hidden;
+	
+	&[aria-hidden="true"] {
+		display: none;
+	}
+}

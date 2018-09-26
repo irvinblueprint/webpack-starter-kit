@@ -1,0 +1,44 @@
+.event {
+	.boxStyle();
+	margin-bottom: 2rem;
+	padding: 0.25em;
+	text-align: center;
+	background: #FFF;
+	color: @darkBlue;
+
+	@media ( min-width: @XS ) and ( max-width: @M ) {
+		font-size: 0.85em;
+	}
+
+	@media ( min-width: @L ) {
+		font-size: 0.85em;
+	}
+}
+
+.event__image {
+	margin: -0.5em -0.5em 1em -0.5em;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.event__city {
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	font-family: @specialFamily;
+	line-height: 1;
+}
+.event__desc-tbc {
+	min-height: 40px;
+}
+.event__date {
+	margin-bottom: 0.5em;
+	font-family: @copyFamilyBold;
+}
+
+.event__description {
+	font-size: 0.85em;
+}

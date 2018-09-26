@@ -1,0 +1,30 @@
+.search-form {
+	display: block;
+	position: relative;
+
+	.content & {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+		width: 20em;
+	}
+}
+
+.search-form__input::placeholder {
+	text-align: center;
+}
+
+.search-form__button {
+	.cover(0, 0, 0, auto);
+	height: auto;
+	padding: 0 0.5em;
+	background: transparent;
+	color: #000;
+	font-size: 1.25em;
+
+	&:before {
+		content: '\f400';
+		font-family: 'Genericons';
+		vertical-align: text-top;
+	}
+}

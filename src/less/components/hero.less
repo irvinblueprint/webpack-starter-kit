@@ -1,0 +1,88 @@
+.hero {
+	position: relative;
+	padding: 2rem 0;
+
+	@media ( min-width: @L ) {
+		padding-top: 1rem;
+	}
+
+	// &:after {
+	// 	content: url(images/dale.png);
+	// 	position: absolute;
+	// 	z-index: 1;
+	// 	top: 2rem;
+	// 	bottom: 0;
+	// 	right: 0;
+	// 	display: block;
+	// 	width: auto;
+	// 	height: 100%;
+	// }
+
+	.grid {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.hero__image {
+	position: absolute;
+	z-index: 1;
+	top: 2rem;
+	bottom: 0;
+	left: 44%;
+	display: block;
+	max-width: none;
+	width: auto;
+	height: 100%;
+
+	@media ( min-width: @S ) {
+		top: 0;
+		left: 56%;
+	}
+
+	@media ( min-width: @L ) {
+		right: 0;
+		left: auto;
+	}
+}
+
+.hero__presents {
+	margin-bottom: 1rem;
+	// padding-left: 3rem;
+	font-size: 1.2em;
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		width: 10.5rem;
+		max-width: 50%;
+		margin-right: 0.5rem;
+	}
+
+	@media ( min-width: @L ) {
+		padding-left: 0;
+	}
+}
+
+.hero__title {
+	margin-top: 0;
+	font-size: 0.9em;
+	font-family: @copyFamilyBlack;
+
+	@media ( min-width: @S ) {
+		font-size: 1.2em;
+	}
+
+	@media ( min-width: @M ) {
+		font-size: 1.7em;
+	}
+}
+
+.hero__logos {
+	display: none;
+
+	@media ( min-width: @M ) {
+		display: block;
+		max-width: 85%;
+	}
+}

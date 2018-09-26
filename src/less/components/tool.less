@@ -1,0 +1,25 @@
+.tool {
+	&:before {
+		content: '';
+		font-family: 'Genericons';
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 1.5em;
+	}
+}
+
+.tool--account:before {
+	content: '\f304';
+}
+
+.tool--cart:before {
+	content: '\f447';
+}
+
+.tool__label {
+	display: none;
+
+	@media ( min-width: @S ) {
+		display: inline-block;
+	}
+}

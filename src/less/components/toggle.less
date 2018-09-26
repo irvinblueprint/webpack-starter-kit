@@ -1,0 +1,28 @@
+.toggle {
+	position: fixed;
+	z-index: 99;
+	top: 1rem;
+	left: 1rem;
+	display: block;
+	height: 2.5rem;
+	padding: 0 0.25rem;
+	border-radius: 4px;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	text-align: center;
+	background: @darkBlue;
+	color: #FFF;
+
+	&:before {
+		content: '\f419';
+		font-family: 'genericons';
+	}
+
+	&[aria-expanded="true"]:before {
+		content: '\f406';
+	}
+
+	&.is-sticky {
+
+	}
+}

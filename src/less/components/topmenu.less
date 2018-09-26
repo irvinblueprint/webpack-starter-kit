@@ -1,0 +1,147 @@
+.site-header {
+	position: relative;
+	background: #002749;
+  	color: #fff;
+  	transform: translateY(0%);
+  	z-index: 9999;
+  	
+  	.container {
+  		position: relative;
+
+  		@media ( max-width: 1100px ) {
+  			padding: 10px 15px;
+  		}
+  	}
+  	&.fixed {
+  		position: fixed;
+  		width: 100%;
+  		z-index: 100;
+
+
+       .site-navigation {
+       	   animation: slideDown 0.4s ease 1 forwards;
+  
+	   }
+  	}
+  	&.hiding {
+  		position: fixed;
+  		width: 100%;
+  		z-index: 100;
+  		animation: slideUp 0.3s linear 1 forwards;
+  		
+  	}
+  	@keyframes slideUp {
+  		0% {
+  			transform: translateY(0%);
+  		}
+  		100% {
+  			transform: translateY(-200%);
+  		}
+  	}
+  	@keyframes slideDown {
+  		0% {
+  			transform: translateY(-100%);
+  			opacity: 0;
+  			visibility: hidden;
+  		}
+  		100% {
+  			transform: translateY(0%);
+  			opacity: 1;
+  			visibility: visible;
+  		}
+  	}
+    .site-navigation {
+    	list-style: none;
+    	padding: 0;
+    	margin: 0 150px 0 0;
+    	text-align: left;
+
+    	@media ( max-width: 1100px ) {
+    		display: none;
+    		padding: 5px 15px;
+			text-align: right;
+			position: absolute;
+		    top: 53px;
+		    left: 0px;
+		    right: 0px;
+		    width: 100%;
+		    margin: 0;
+		    z-index: 32;
+		    background: #084469;
+		}
+		&--mobile {
+			display: none;
+		}
+    	li {
+    		display: inline-block;
+    		margin: 0;
+    		padding: 10px 0;
+    		transition: padding 0.3s linear;
+
+    		@media ( max-width: 1100px ) {
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+
+    	}
+    }
+   
+	a {
+		padding: 15px 15px 15px 0;
+		display: block;
+		color: #fff;
+		font-family: 'Avenir LT W01_65 Medium1475532', sans-serif;
+
+		@media ( max-width: 1100px ) {
+			display: inline-block;
+			padding: 5px 0 5px 10px;
+		}
+
+		&.button {
+			position: absolute;
+			top: 15px;
+			right: 0;
+			padding: 15px;
+			font-family: @copyFamilyHeavy;
+			
+			@media ( max-width: 1100px ) {
+				padding: 10px;
+				left: 15px;
+			    right: auto;
+			    top: 7px;
+			}
+
+			&:hover {
+				background-color: @orange;
+				color: #fff;
+			}
+		}
+
+		&:hover {
+			color: #f15d22;
+		}
+	}
+	.menu {
+		display: none;
+		text-transform: uppercase;
+
+		@media ( max-width: 1100px ) {
+			display: block;
+			text-align: right;
+		}
+		button {
+			height: inherit;
+			display: inline-block;
+			background: transparent;
+			padding: 5px;
+			border-radius: 3px;
+			background: #fff;
+		}
+		span {
+		    font-size: 22px;	
+		}
+
+	}
+
+}

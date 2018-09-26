@@ -1,0 +1,131 @@
+button,
+textarea,
+[type="button"],
+[type="color"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select[multiple] {
+	-webkit-appearance: none;
+}
+
+button,
+input,
+select,
+textarea,
+fieldset {
+	max-width: 100%;
+	font-size: inherit;
+
+	&[disabled] {
+		opacity: 0.7;
+		cursor: default;
+	}
+}
+
+/* Rectangular Inputs */
+input {
+	padding: 0;
+}
+
+button,
+input,
+textarea,
+select {
+	padding-right: 0.4em;
+	padding-left: 0.4em;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0;
+	transition: 150ms ease-out;
+}
+
+button,
+input,
+select {
+	height: 2.5em;
+	line-height: normal;
+}
+
+select[multiple] {
+	height: auto;
+}
+
+input,
+textarea,
+select {
+	background: #F8F8F8;
+	border-color: #CCC;
+	color: #000;
+}
+
+textarea,
+select[multiple] {
+	width: 100%;
+	padding-top: 0.35em;
+	padding-bottom: 0.35em;
+	vertical-align: top;
+}
+
+/* Buttons */
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+	padding: 0 2em;
+	background: #CCC;
+	border-color: transparent;
+	color: #000;
+	text-align: center;
+	cursor: pointer;
+
+	&:active {
+		transform: translateY(1px);
+	}
+}
+
+/* Non-Rectangular Inputs */
+[type="checkbox"],
+[type="radio"],
+[type="range"],
+[type="file"],
+[type="image"]{
+	height: auto;
+}
+
+[type="range"],
+[type="file"],
+[type="image"] {
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
+/* Fieldsets */
+legend {
+	font-weight: bold;
+}
+
+/* Focus */
+input,
+textarea,
+select,
+button {
+	&:focus {
+		outline: none;
+		border-color: @trim;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	}
+}

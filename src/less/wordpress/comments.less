@@ -1,0 +1,107 @@
+/* Comments List */
+.comments {
+	margin-bottom: 3rem;
+}
+
+.comments__header {
+	margin-bottom: 3rem;
+}
+
+.comment__list {
+	padding: 0;
+}
+
+/* Comments */
+.comment,
+.pingback,
+.trackback {
+	list-style: none;
+}
+
+.comment-body {
+	margin-bottom: 3rem;
+}
+
+.comment-meta {
+	position: relative;
+	margin-bottom: 0.75em;
+}
+
+.comment-metadata {
+	color: fade(@color, 50%);
+
+	a:not(:hover) {
+		color: inherit;
+	}
+}
+
+.comment-meta,
+.comment-content,
+.reply {
+	padding-left: 2.5rem;
+
+	@media ( min-width: @S ) {
+		padding-left: 4.5rem;
+	}
+}
+
+.comment-author .avatar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	max-width: 2rem;
+	width: auto;
+	height: auto;
+	border-radius: 50%;
+
+	@media ( min-width: @S ) {
+		max-width: 4rem;
+	}
+}
+
+.comment-edit-link {
+	margin-left: 0.5em;
+}
+
+.pingback,
+.trackback {
+	.url {
+		font-style: italic;
+	}
+}
+
+/* Comment Form */
+.comment-respond {
+	margin: 4rem 0 0 0;
+}
+
+.comment-reply-title small {
+	display: block;
+}
+
+.comments .children {
+	padding-left: 5%;
+}
+
+.comment-form {
+	display: block;
+
+	label {
+		display: block;
+	}
+}
+
+.required {
+	color: @ncsRed;
+}
+
+.comment-metadata,
+.form-allowed-tags,
+.pingback .edit-link,
+.trackback .edit-link {
+	font-size: 0.8em;
+}
+
+#cancel-comment-reply-link {
+	font-size: 0.6em;
+}

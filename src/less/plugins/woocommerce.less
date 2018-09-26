@@ -1,0 +1,72 @@
+/**
+ * Product Thumbnails
+ *
+ * 1. Main product thumbnail link.
+ * 2. Product title.
+ */
+.woocommerce ul.products li.product a:not(.button) /* 1 */ {
+	color: inherit;
+}
+
+.woocommerce ul.products li.product h3 /* 2 */ {
+	font: inherit;
+	color: inherit;
+}
+
+/**
+ * Prices
+ *
+ * 1. Prices in product thumbnails.
+ * 2. Prices on single product.
+ */
+.woocommerce ul.products li.product .price /* 1 */,
+.woocommerce div.product p.price /* 2 */,
+.woocommerce div.product span.price /* 2 */ {
+	color: @ncsRed;
+}
+
+/**
+ * Buttons
+ *
+ * 1. Regular WooCommerce buttons.
+ * 2. Product thumbnail Add to Cart buttons.
+ * 3. Primary WooCommerce buttons.
+ */
+.woocommerce #respond input#submit /* 1 */,
+.woocommerce a.button /* 1 */,
+.woocommerce button.button /* 1 */,
+.woocommerce input.button /* 1 */ {
+	border-radius: 0;
+	font-weight: inherit;
+}
+
+.woocommerce  ul.products li.product .button /* 2 */,
+.woocommerce #respond input#submit.alt /* 3 */,
+.woocommerce a.button.alt /* 3 */,
+.woocommerce button.button.alt /* 3 */,
+.woocommerce input.button.alt /* 3 */ {
+	background-color: @trim;
+	color: #FFF;
+
+	&:hover {
+		background-color: darken(@trim,10%);
+		color: #FFF;
+	}
+}
+
+/* Badges */
+.woocommerce span.onsale {
+	box-sizing: content-box;
+	background-color: @ncsRed;
+}
+
+/* Star Ratings */
+.woocommerce .star-rating span {
+	color: #FCB805;
+}
+
+/* Page title */
+.page-title {
+	&:extend(.content__title);
+	margin-bottom: 3rem;
+}

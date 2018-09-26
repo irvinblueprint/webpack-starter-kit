@@ -1,0 +1,65 @@
+.gallery {
+	margin-left: -( @gallerySpacing / 2);
+	margin-right: -( @gallerySpacing / 2);
+
+	.clearfix();
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	.gallery-item {
+		float: left;
+		width: 50%;
+		margin: 0;
+		padding: 0 ( @gallerySpacing / 2 ) @gallerySpacing ( @gallerySpacing / 2 );
+		text-align: center;
+
+		&:nth-of-type(2n+1) {
+			clear: left;
+		}
+	}
+
+	.gallery-caption {
+		margin: 0 0 1em 0;
+		font-size: 0.8em;
+		text-align: center;
+	}
+}
+
+.gallery-columns-1 .gallery-item {
+	clear: none;
+	width: 100%;
+	clear: both;
+}
+
+.gallery .gallery-caption,
+.wp-caption-text,
+.wp-caption-dd {
+	font-style: italic;
+}
+
+@media ( min-width: @M ) {
+	.gallery-item.gallery-item:nth-of-type(2n+1)  { /* Extra specificity for editor */
+		clear: none;
+	}
+
+	.galleryColumns( @i ) when ( @i > 1 ) {
+		.gallery-columns-@{i} .gallery-item {
+			width: ( 100% / @i );
+
+			&:nth-of-type(@{i}n+1) {
+				clear: left;
+			}
+		}
+
+		.galleryColumns( ( @i - 1 ) );
+	}
+
+	.galleryColumns(9);
+}
+
+.gallery-caption {
+	padding: 0 1em;
+}

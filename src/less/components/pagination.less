@@ -1,0 +1,26 @@
+.pagination {
+	clear: both;
+	text-align: center;
+	.clearfix();
+
+	> a,
+	> span {
+		display:inline-block;
+		margin: 0.15em;
+		padding: 0.25em 0.75em;
+	}
+
+	> span {
+		color: fade(@color, 50%);
+	}
+
+	.dots {
+		border-color: transparent;
+	}
+}
+
+.pagination,
+.post-navigation {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}

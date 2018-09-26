@@ -1,0 +1,45 @@
+.panel {
+	position: relative;
+	.boxStyle();
+	overflow: visible;
+	display: flex;
+	height: 7rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	text-align: center;
+	color: #FFF;
+
+	.overlay();
+
+	&:before {
+		border-radius: inherit;
+	}
+
+}
+
+.panel__icon {
+	box-sizing: content-box;
+	position: absolute;
+	z-index: 2;
+	top: -22px;
+	left: 50%;
+	margin-left: -22px;
+	display: block;
+	width: 42px;
+	height: 42px;
+	border: 1px solid #FFF;
+	border-radius: 50%;
+	background: @orange;
+}
+
+.panel__label {
+	position: relative;
+	z-index: 2;
+	margin: auto;
+	font-size: 1.1em;
+	font-family: @copyFamilyBold;
+	
+	@media ( min-width: @M ) and ( max-width: @L ) {
+		font-size: 0.8em;
+	}
+}
